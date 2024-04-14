@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Annisa Nurul Hakim</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        let currentOrganisasiIndex = 0;
+        let currentKepanitiaanIndex = 0;
+        const maxVisibleItems = 1;
+    
+        function showOrganisasiItems() {
+            const organisasiItems = document.querySelectorAll('.box-organisasi ul li');
+            organisasiItems.forEach((item, index) => {
+                if (index >= currentOrganisasiIndex && index < currentOrganisasiIndex + maxVisibleItems) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    
+        function showKepanitiaanItems() {
+            const kepanitiaanItems = document.querySelectorAll('.box-kepanitiaan ul li');
+            kepanitiaanItems.forEach((item, index) => {
+                if (index >= currentKepanitiaanIndex && index < currentKepanitiaanIndex + maxVisibleItems) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    
+        function nextOrganisasi() {
+            currentOrganisasiIndex += maxVisibleItems;
+            if (currentOrganisasiIndex > 2) {
+                currentOrganisasiIndex = 0;
+            }
+            showOrganisasiItems();
+        }
+
+        function prevOrganisasi() {
+            currentOrganisasiIndex -= maxVisibleItems;
+            if (currentOrganisasiIndex < 0) {
+                currentOrganisasiIndex = Math.max(0, document.querySelectorAll('.box-organisasi ul li').length - maxVisibleItems);
+            }
+            showOrganisasiItems();
+        }
+
+        function nextKepanitiaan() {
+            currentKepanitiaanIndex += maxVisibleItems;
+            if (currentKepanitiaanIndex > 4) {
+                currentKepanitiaanIndex = 0;
+            }
+            showKepanitiaanItems();
+        }
+    
+        function prevKepanitiaan() {
+            currentKepanitiaanIndex -= maxVisibleItems;
+            if (currentKepanitiaanIndex < 0) {
+                currentKepanitiaanIndex = Math.max(0, document.querySelectorAll('.box-kepanitiaan ul li').length - maxVisibleItems);
+            }
+            showKepanitiaanItems();
+        }
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            showOrganisasiItems();
+            showKepanitiaanItems();
+        });
+    </script>
+    
+</head>
+<body>
+    
+<div class="navigasi">
+    <div class="logo">
+        <h2>Portofolio Pribadi</h2>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#identity">Identity</a></li>
+            <li><a href="#pendidikan">Education</a></li>
+            <li><a href="#pencapaian">Achievements</a></li>
+            <li><a href="#pengalaman">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="banner" id="identity">
+    <img src="image/nisa.jpg">
+    <h1>Hai, Kenalin Aku Nisa!</h1>
+    <p>Selamat datang di portofolio pribadi aku!</p>
+    <p>Salam hangat dan semoga kamu sehat selalu..</p>
+    <a href="identity.html"><button>More Details</button></a>
+</div>
+
+<br id="pendidikan">
+<div class="box-pendidikan-container">
+    <h1>Riwayat Pendidikan</h1>
+    <div class="box-pendidikan">
+        <div class="box-sd">
+            <img src="image/sd.jpg">
+            <p><h3>Sekolah Dasar</h3></p>
+            <p>SDN 07 Belakang Balok Bukittinggi</p>
+            <p><h4>2010-2016</h4></p>
+        </div>
+        <div class="box-smp">
+            <img src="image/smp.jpg">
+            <p><h3>Sekolah Menengah Pertama</h3></p>
+            <p>SMPN 1 Bukittinggi</p>
+            <p><h4>2016-2019</h4></p>
+        </div>
+        <div class="box-sma">
+            <img src="image/sma.jpg">
+            <p><h3>Sekolah Menengah Atas</h3></p>
+            <p>SMAN 1 Bukittinggi</p>
+            <p>Jurusan: MIPA</p>
+            <p><h4>2019-2022</h4></p>
+        </div>
+        <div class="box-kuliah">
+            <img src="image/fti.jpg">
+            <p><h3>Perguruan Tinggi</h3></p>
+            <p>Universitas Andalas</p>
+            <p>Jurusan: Sistem Informasi</p>
+            <p><h4>2022-Sekarang</h4></p>
+        </div>
+    </div>
+</div>
+
+<br id="pencapaian">
+<div class="pencapaian">
+    <a href="achievements.html#prestasi"><button>Prestasi</button></a>
+    <a href="achievements.html#proyek"><button>Proyek</button></a>
+    <a href="achievements.html#sertifikat"><button>Sertifikat</button></a>
+</div>
+
+<br id="pengalaman">
+<div class="organisasi-kepanitiaan-container">
+    <div class="box-organisasi">
+        <h1>Pengalaman Organisasi</h1>
+        <ul>
+            <li>
+                <div class="organisasi-details">
+                    <img src="image/fsi.jpg" alt="FSI Al-Fatih">
+                    <div class="organisasi-info">
+                        <div class="organisasi-info-details">
+                            <h2>FSI Al-Fatih</h2>
+                            <p>Bendahara Umum</p>
+                            <h4>2024-Sekarang</h4>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="organisasi-details">
+                    <img src="image/hmsi.jpg" alt="HMSI">
+                    <div class="organisasi-info">
+                        <div class="organisasi-info-details">
+                            <h2>HMSI</h2>
+                            <p>Staff Divisi Bikraf</p>
+                            <h4>2023-Sekarang</h4>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="organisasi-details">
+                    <img src="image/bem.jpg" alt="BEM KM FTI">
+                    <div class="organisasi-info">
+                        <div class="organisasi-info-details">
+                            <h2>BEM KM FTI</h2>
+                            <p>Bendahara Dinas Adkesma</p>
+                            <h4>2024-Sekarang</h4>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="button-container">
+            <button id="prevButtonOrg" onclick="prevOrganisasi()">
+                <img src="image/prev.png" alt="Prev">
+            </button>
+            <button id="nextButtonOrg" onclick="nextOrganisasi()">
+                <img src="image/next.png" alt="Next">
+            </button>
+        </div>
+    </div>
+    <div class="box-kepanitiaan">
+        <h1>Pengalaman Kepanitiaan</h1>
+        <ul>
+            <li>
+                <div class="kepanitiaan-details">
+                    <img src="image/ecclesia.jpg">
+                    <div class="kepanitiaan-info">
+                        <div class="kepanitiaan-info-details">
+                            <h2>Gathering HMSI</h2>
+                            <p>Staff Divisi Pubdok</p>
+                            <h4>2023</h4>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="kepanitiaan-details">
+                    <img src="image/mubes hmsi.jpg" alt="Mubes HMSI">
+                    <div class="kepanitiaan-info">
+                        <div class="kepanitiaan-info-details">
+                            <h2>Mubes HMSI</h2>
+                            <p>Staff Divisi Humas</p>
+                            <h4>2023</h4>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="kepanitiaan-details">
+                    <img src="image/iot.jpg" alt="IoT FSI Al-Fatih">
+                    <div class="kepanitiaan-info">
+                        <div class="kepanitiaan-info-details">
+                            <h2>IoT FSI Al-Fatih</h2>
+                            <p>Staff Divisi Perlengkapan</p>
+                            <h4>2023</h4>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="kepanitiaan-details">
+                    <img src="image/mubes alfatih.jpg" alt="Mubes FSI Al-Fatih">
+                    <div class="kepanitiaan-info">
+                        <div class="kepanitiaan-info-details">
+                            <h2>Mubes FSI Al-Fatih</h2>
+                            <p>Bendahara Umum</p>
+                            <h4>2023</h4>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="kepanitiaan-details">
+                    <img src="image/rdk.jpg" alt="RDK Unand 1445H">
+                    <div class="kepanitiaan-info">
+                        <div class="kepanitiaan-info-details">
+                            <h2>RDK Unand 1445H</h2>
+                            <p>Staff Divisi Media</p>
+                            <h4>2024</h4>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="button-container">
+            <button id="prevButtonKep" onclick="prevKepanitiaan()"><img src="image/prev.png" alt="Prev"></button>
+            <button id="nextButtonKep" onclick="nextKepanitiaan()"><img src="image/next.png" alt="Next"></button>
+        </div>
+    </div>
+</div>
+
+<br id="skills">
+<div class="skills-container">
+    <h1>Skills</h1>
+    <div class="skills-content">
+        <div class="softskill">
+            <h2>Softskill</h2>
+            <ul>
+                <li>
+                    <div class="nomor-skill">1</div>
+                    <span>Time Management</span>
+                </li>
+                <li>
+                    <div class="nomor-skill">2</div>
+                    <span>Problem Solving</span>
+                </li>
+                <li>
+                    <div class="nomor-skill">3</div>
+                    <span>Teamwork</span>
+                </li>
+                <li>
+                    <div class="nomor-skill">4</div>
+                    <span>Creativity</span>
+                </li>
+            </ul>
+        </div>
+        <div class="hardskill">
+            <h2>Hardskill</h2>
+            <ul>
+                <li>
+                    <div class="nomor-skill">1</div>
+                    <span>Pemrograman Python & Java</span>
+                </li>
+                <li>
+                    <div class="nomor-skill">2</div>
+                    <span>Analisis Data</span>
+                </li>
+                <li>
+                    <div class="nomor-skill">3</div>
+                    <span>Basis Data (SQL)</span>
+                </li>
+                <li>
+                    <div class="nomor-skill">4</div>
+                    <span>Desain Grafis</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="kontak-container" id="contact">
+    <div class="logo-contact">
+        <img src="image/contact.png" alt="Logo">
+    </div>
+    <div class="kontak-content">
+        <div class="kontak-item">
+            <a href="mailto:stuckwithsaa@gmail.com">
+                <img src="image/gmail.png" alt="Email">
+            </a>
+            <p>stuckwithsaa@gmail.com</p>
+        </div>
+        <div class="kontak-item">
+            <a href="tel:+6289603552423">
+                <img src="image/whatsapp.png" alt="Phone">
+            </a>
+            <p>+6289603552423</p>
+        </div>
+        <div class="kontak-item">
+            <a href="https://www.instagram.com/stuckwitha">
+                <img src="image/instagram.png" alt="Instagram">
+            </a>
+            <p>@stuckwitha</p>
+        </div>
+        <div class="kontak-item">
+            <a href="https://maps.app.goo.gl/A5N3BgP5Hy5Uh8Ci9">
+                <img src="image/map.png" alt="Address">
+            </a>
+            <p>Kota Padang, Indonesia</p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2024 Portofolio Annisa Nurul Hakim. All rights reserved.</p>
+    </div>
+</footer>

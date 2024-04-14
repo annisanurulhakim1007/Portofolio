@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: verdana;
+    background-image: url('image/nisaa.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navigasi {
+    background-color: #D14D72;
+    width: 100%;
+    height: 70px;
+    color: #FCC8D1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 70px;
+}
+
+.identity-container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.identity-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.identity-section {
+    background-color: #FCC8D1;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    margin-left: 500px;
+    margin-top: 15px;
+}
+
+.identity-section h2 {
+    color: #D14D72;
+    margin-bottom: 15px;
+}
+
+.identity-section p {
+    color: #3E3E3E;
+    margin-bottom: 10px;
+}
+
+.identity-section:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.back {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 50px;
+}
+
+.back img {
+    width: 100%; 
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.back:hover img {
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: #D14D72;
+    color: #FCC8D1;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    margin: auto;
+    max-width: 1200px;
+}
+
+.footer p {
+    margin: 0;
+}

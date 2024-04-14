@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+}
+
+.navigasi {
+    background-color: #D14D72;
+    width: 100%;
+    height: 70px;
+    color: #FCC8D1;
+    position: fixed;
+}
+
+.logo {
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 70px;
+}
+
+.menu {
+    margin-left: 750px;
+    padding-top: 25px;
+}
+
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #FCC8D1;
+}
+
+.menu ul li a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.banner {
+    background-image: url('image/banner.png');
+    height: 790px;
+    text-align: center;
+    color: #D14D72;
+}
+
+.banner img {
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    border: 7px solid #D14D72;
+    margin-top: 185px;
+}
+
+.banner img:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s ease; 
+}
+
+.banner h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.banner button{
+    margin-top: 40px;
+    padding: 10px;
+    width: 400px;
+    border-radius: 50px;
+    border: none;
+    background-color: #FCC8D1;
+    color: black;
+}
+
+.banner button:hover {
+    background-color: #D14D72;
+    color: white;
+    transform: scale(1.1);
+    transition: transform 0.2s ease; 
+}
+
+.box-pendidikan-container {
+    text-align: center;
+    color: black;
+    height: 625px;
+    width: 1400px;
+    border-radius: 125px;
+    background-color: #F8E8EE;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-pendidikan-container h1 {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.box-pendidikan {
+    text-align: center;
+    color: black;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-sd, .box-smp, .box-sma, .box-kuliah {
+    width: 200px;
+    height: 350px;
+    background-color: #FCC8D1;
+    text-align: center;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 20px;
+    float:left;
+}
+
+.box-pendidikan img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    border: 5px solid white;
+    margin-top: 30px;
+}
+
+.box-sd:hover, .box-smp:hover, .box-sma:hover, .box-kuliah:hover {
+    background-color: #D14D72;
+    color: white;
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.box-pendidikan h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 0px, 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.pencapaian {
+    text-align: center;
+    color: black;
+    height: 625px;
+    width: 1400px;
+    border-radius: 100px;
+    background-image: url('image/kertas.png');
+    margin: 100px auto 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.pencapaian a {
+    text-decoration: none;
+}
+
+.pencapaian button {
+    margin: 20px;
+    padding: 20px 40px;
+    border-radius: 25px;
+    border: none;
+    width: 700px;
+    height: 100px;
+    background-color: #FCC8D1;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+}
+
+.pencapaian button:hover {
+    background-color: #D14D72;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.organisasi-kepanitiaan-container {
+    text-align: left;
+    color: black;
+    height: auto;
+    background-color: #F8E8EE;
+    padding: 50px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-organisasi, .box-kepanitiaan {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    min-height: 490px;
+    width: 650px;
+    border-radius: 50px;
+    background-color: #FCC8D1;
+    overflow-x: auto;
+    white-space: nowrap;
+    align-items: center;
+}
+
+.box-organisasi ul, .box-kepanitiaan ul {
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-organisasi h1, .box-kepanitiaan h1 {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+
+.box-organisasi h1, .box-organisasi h2, .box-kepanitiaan h1, .box-kepanitiaan h2 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.organisasi-details, .kepanitiaan-details {
+    height: 270px; 
+    width: 280px;
+    background-color: #6EBFB5;
+    padding: 15px;
+    margin: 25px 25px 25px 10px;
+    border-radius: 10px;
+    justify-content: space-around;
+    flex-grow: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.organisasi-details img, .kepanitiaan-details img {
+    height: 170px;
+    width: 273px;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.organisasi-info, .kepanitiaan-info {
+    height: 70px;
+    width: 273px;
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: #FCC8D1;
+    display: flex;
+}
+
+.organisasi-info-details, .kepanitiaan-info-details {
+    margin-left: 20px;
+    justify-content: space-around;
+}
+
+.organisasi-details:hover, .kepanitiaan-details:hover {
+    background-color: #D14D72;
+    transition: background-color 0.3s ease;
+}
+
+.organisasi-details h2, .kepanitiaan-details h2 {
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+.button-container {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button-container img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px
+}
+
+#prevButtonOrg {
+    margin-right: 30px;
+}
+
+#nextButtonKep {
+    margin-left: 30px;
+}
+
+.skills-container {
+    text-align: center;
+    color: black;
+    margin-top: 100px;
+    background-color: #F8E8EE;
+    border-radius: 125px;
+    height: 525px;
+    width: 1400px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-container h1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.skills-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.softskill, .hardskill {
+    width: 30%;
+    background-color: #FCC8D1;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.softskill h2, .hardskill h2 {
+    margin-bottom: 20px;
+}
+
+.softskill ul, .hardskill ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.softskill li, .hardskill li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.nomor-skill {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #D14D72;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    margin-right: 10px;
+}
+
+.skills-container li:hover {
+    background-color: #D14D72;
+    color: white;
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.kontak-container {
+    background-image: url('image/bg-contact.png');
+    height: 600px;
+    margin-top: 100px;
+    padding-top: 50px;
+    overflow: hidden;
+}
+
+.logo-contact {
+    float: left;
+    margin: auto;
+    margin-left: 150px;
+    height: 150px;
+    width: 150px;
+}
+
+.logo-contact img {
+    border-radius: 50%;
+}
+
+.logo-contact:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+}
+
+.kontak-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 800px;
+    margin-top: 50px;
+}
+
+.kontak-item {
+    width: 70%;
+    background-color: #FCC8D1;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.kontak-item:hover {
+    color: #D14D72;
+    transition: color 0.3s ease;
+}
+
+.kontak-item img {
+    width: 50px;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.kontak-item:hover img {
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: #D14D72;
+    color: #FCC8D1;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    margin: auto;
+    max-width: 1200px;
+}
+
+.footer p {
+    margin: 0;
+}
